@@ -4,5 +4,5 @@ EXPOSE 8080
 
 RUN rm -fr /usr/local/tomcat/webapps/ROOT
 
-#  Expectation - derived dockerfile will copy or add expanded war files to root
-#  COPY war-1.0-SNAPSHOT /usr/local/tomcat/webapps/ROOT
+#  Expectation - calling process will have copied expanded war folder to ./war
+COPY war /usr/local/tomcat/webapps/ROOT
